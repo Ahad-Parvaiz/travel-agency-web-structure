@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Booking</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .payment-section {
+      margin-top: 2em;
+      padding: 1.5em;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .payment-options {
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      margin-bottom: 1em;
+    }
+
+    .payment-form {
+      display: none;
+      margin-top: 1em;
+    }
+
+    /* Show payment form based on radio button */
+    #easypaisa:checked ~ .forms .easypaisa-form,
+    #jazzcash:checked ~ .forms .jazzcash-form {
+      display: block;
+    }
+
+    .demo-number {
+      text-align: center;
+      font-weight: bold;
+      color: #007BFF;
+      margin-bottom: 1em;
+    }
+
+    .payment-form input {
+      margin-bottom: 1em;
+    }
+
+    .payment-label {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <img src="image/logo.png">
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="destinations.html">Transport Booking</a></li>
+        <li><a href="hotel.html">Hotel Booking</a></li>
+        <li><a href="insurance.html">Insurance</a></li>
+        <li><a href="destinations1.html">Destinations</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <h2>Flight Booking</h2>
+    <form class="flight-booking-form">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="from">From:</label>
+      <input type="text" id="from" name="from" required>
+
+      <label for="to">To:</label>
+      <input type="text" id="to" name="to" required>
+
+      <label for="departureDate">Departure Date:</label>
+      <input type="date" id="departureDate" name="departureDate" required>
+
+      <label for="returnDate">Return Date:</label>
+      <input type="date" id="returnDate" name="returnDate">
+
+      <label for="passengers">Number of Passengers:</label>
+      <input type="number" id="passengers" name="passengers" min="1" required>
+
+      <label for="class">Class:</label>
+      <select id="class" name="class" required>
+        <option value="">-- Select Class --</option>
+        <option value="economy">Economy</option>
+        <option value="business">Business</option>
+        <option value="first">First Class</option>
+      </select>
+    </form>
+
+    <!-- Payment Section -->
+    <div class="payment-section">
+      <div class="demo-number">Demo Number: 0300-1234567</div>
+
+      <div class="payment-options">
+        <label class="payment-label">
+          <input type="radio" name="payment" id="easypaisa"> EasyPaisa
+        </label>
+        <label class="payment-label">
+          <input type="radio" name="payment" id="jazzcash"> JazzCash
+        </label>
+      </div>
+
+      <div class="forms">
+        <div class="payment-form easypaisa-form">
+          <h3>EasyPaisa Payment</h3>
+          <form>
+            <label for="easyName">Account Holder Name:</label>
+            <input type="text" id="easyName" name="easyName" required>
+
+            <label for="easyNumber">EasyPaisa Number:</label>
+            <input type="tel" id="easyNumber" name="easyNumber" required>
+
+            <label for="easyAmount">Amount:</label>
+            <input type="number" id="easyAmount" name="easyAmount" required>
+          </form>
+        </div>
+
+        <div class="payment-form jazzcash-form">
+          <h3>JazzCash Payment</h3>
+          <form>
+            <label for="jazzName">Account Holder Name:</label>
+            <input type="text" id="jazzName" name="jazzName" required>
+
+            <label for="jazzNumber">JazzCash Number:</label>
+            <input type="tel" id="jazzNumber" name="jazzNumber" required>
+
+            <label for="jazzAmount">Amount:</label>
+            <input type="number" id="jazzAmount" name="jazzAmount" required>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tourista Consultant. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Testimonials</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Popup overlay */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup:target {
+      display: flex;
+    }
+
+    /* Popup content */
+    .popup-content {
+      background: #fff;
+      padding: 2em;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+    }
+
+    .popup-content h3 {
+      margin-top: 0;
+      color: #007BFF;
+    }
+
+    .popup-content form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .popup-content input,
+    .popup-content textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .popup-content button {
+      background: #007BFF;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .feedback-btn {
+      margin: 2em auto;
+      display: block;
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <img src="image/logo.png" alt="Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="destinations.html">Transport Booking</a></li>
+        <li><a href="hotel.html">Hotel Booking</a></li>
+        <li><a href="insurance.html">Insurance</a></li>
+        <li><a href="destinations1.html">Destinations</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h2>What Our Clients Say</h2>
+  <blockquote>"Amazing experience! The Paris trip was well-organized and unforgettable." – Anna</blockquote>
+  <blockquote>"Great service and attention to detail." – John</blockquote>
+
+  <!-- Feedback Button -->
+  <a href="#feedback-popup" class="feedback-btn">Leave Feedback</a>
+</main>
+
+<!-- Popup Form -->
+<div id="feedback-popup" class="popup">
+  <div class="popup-content">
+    <a href="#" class="close-btn">&times;</a>
+    <h3>Leave Your Feedback</h3>
+    <form action="#">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Feedback" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<footer class="ftr5">
+  <p>&copy; 2025 Tourista Consultant. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

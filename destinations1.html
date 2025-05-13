@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top Destinations</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 1.5em 0;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+
+    .destination {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .destination img {
+      width: 50%;
+      height: auto;
+    }
+
+    .destination-info {
+      padding: 20px;
+      width: 50%;
+    }
+
+    .destination-info h2 {
+      color: #007BFF;
+      margin-top: 0;
+    }
+
+    .destination-info p {
+      color: #444;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #eaeaea;
+      margin-top: 3em;
+    }
+
+    @media (max-width: 768px) {
+      .destination {
+        flex-direction: column;
+      }
+
+      .destination img,
+      .destination-info {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  <div class="header-container">
+    <img src="image/logo.png">
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="destinations.html">Transport Booking</a></li>
+        <li><a href="hotel.html">Hotel Booking</a></li>
+        <li><a href="insurance.html">Insurance</a></li>
+        <li><a href="destinations1.html">Destinations</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <div class="destination">
+      <img src="image/paris.jpg" alt="Paris">
+      <div class="destination-info">
+        <h2>Paris</h2>
+        <p>Known as the "City of Light," Paris is famous for its romantic ambiance, iconic Eiffel Tower, charming streets, and world-class cuisine. A perfect destination for culture, art, and fashion lovers.</p>
+      </div>
+    </div>
+
+    <div class="destination">
+      <img src="image/bali.jpg" alt="Bali">
+      <div class="destination-info">
+        <h2>Bali</h2>
+        <p>Bali offers a magical blend of spiritual culture, breathtaking beaches, lush green landscapes, and warm hospitality. Ideal for relaxation, adventure, and cultural exploration.</p>
+      </div>
+    </div>
+
+    <div class="destination">
+      <img src="image/Tokyo.jpg" alt="Tokyo">
+      <div class="destination-info">
+        <h2>Tokyo</h2>
+        <p>Tokyo is a bustling metropolis that blends modern innovation with traditional heritage. From neon-lit streets and anime culture to ancient temples and sushi, it's a vibrant experience for all travelers.</p>
+      </div>
+    </div>
+
+    <div class="destination">
+      <img src="image/Rome.jpg" alt="Rome">
+      <div class="destination-info">
+        <h2>Rome</h2>
+        <p>Rome, the Eternal City, invites you to step back in time. Visit the Colosseum, Vatican City, and Roman Forum while enjoying authentic Italian cuisine and a lively street atmosphere.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tourista Consultant. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
